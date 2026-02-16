@@ -1,0 +1,19 @@
+# --- Java / Spring Boot ---
+ecommerce-api/target/
+ecommerce-api/.mvn/
+ecommerce-api/mvnw
+ecommerce-api/mvnw.cmd
+ecommerce-api/.classpath
+ecommerce-api/.project
+ecommerce-api/.settings/
+ecommerce-api/.vscode/
+*.class
+
+# --- Node / React ---
+ecommerce-frontend/node_modules/
+ecommerce-frontend/dist/
+ecommerce-frontend/.env
+.DS_Store
+
+# --- Secretos ---
+ecommerce-api/src/main/resources/application.properties
