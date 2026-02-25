@@ -64,4 +64,15 @@ public class PedidoController {
 
         return ResponseEntity.ok("Compra realizada con éxito! Total a pagar: " + total + "€");
     }
+
+    @GetMapping("/mis-pedidos")
+    public ResponseEntity<List<Pedido>> obtenerMisPedidos() {
+        
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String emailUsuario = auth.getName(); 
+        
+        List<Pedido> misPedidos = pedidoRepository.findByUsuarioEmail(emailUsuario);
+        
+        return ResponseEntity.ok(misPedidos);
+    }
 }
